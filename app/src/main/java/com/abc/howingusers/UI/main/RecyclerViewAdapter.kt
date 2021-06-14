@@ -6,12 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toast.makeText
 import androidx.recyclerview.widget.RecyclerView
 import com.abc.howingusers.Data.users
 import com.abc.howingusers.R
 import com.abc.howingusers.domain.MainViewModel
 
-class RecyclerViewAdapter (val viewModel: MainViewModel, val arrayList: ArrayList<users>, val context: Context): RecyclerView.Adapter<RecyclerViewAdapter.NotesViewHolder>() {
+class RecyclerViewAdapter( val arrayList: ArrayList<users>): RecyclerView.Adapter<RecyclerViewAdapter.NotesViewHolder>()  {
     override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int
@@ -26,7 +27,7 @@ class RecyclerViewAdapter (val viewModel: MainViewModel, val arrayList: ArrayLis
 
     override fun getItemCount(): Int {
         if(arrayList.size==0){
-            Toast.makeText(context,"List is empty", Toast.LENGTH_LONG).show()
+          //  Toast.makeText(this,"List is empty", Toast.LENGTH_LONG).show()
         }else{
 
         }
@@ -40,11 +41,13 @@ class RecyclerViewAdapter (val viewModel: MainViewModel, val arrayList: ArrayLis
 
         fun bind(user: users){
          //val id: Int, val email: String, val firstName: String, val lastName: String, val avatar: String)
-            val name: TextView = binding.findViewById(R.id.name)
+            val name = binding.findViewById(R.id.name) as TextView
+            val userID = binding.findViewById(R.id.userID) as TextView
+            val email = binding.findViewById(R.id.email) as TextView
 
-           /* binding.name.text = user.firstName + user.lastName
-            binding.userID.text = user.id
-            binding.email.text = user.email */
+            name.text = user.firstName + user.lastName
+            userID.text = user.userID.toString()
+            email.text = user.email
 
         }
 
