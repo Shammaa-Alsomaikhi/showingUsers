@@ -1,7 +1,8 @@
-package com.abc.howingusers
+package com.abc.howingusers.UI.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.abc.howingusers.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
