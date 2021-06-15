@@ -25,10 +25,14 @@ class MainActivity : AppCompatActivity() {
         val users = ArrayList<users>()
 
         //adding some dummy data to the list
-        users.add(users(1 ,"a1@gmail.com", "Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
+       /* users.add(users(1 ,"a1@gmail.com", "Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
         users.add(users(2,  "a2@gmail.com","Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
         users.add(users(3, "a3@gmail.com","Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
         users.add(users(4, "a4@gmail.com","Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
+        users.add(users(1 ,"a1@gmail.com", "Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
+        users.add(users(2,  "a2@gmail.com","Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
+        users.add(users(3, "a3@gmail.com","Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))
+        users.add(users(4, "a4@gmail.com","Ranchi", "Jharkhand", "https://t4.ftcdn.net/jpg/02/45/28/17/360_F_245281783_3zeOLu7mhjUmYbFlBwSNsfwQmQZzukWo.jpg"))*/
 
         //creating our adapter
         val adapter = RecyclerViewAdapter(users)

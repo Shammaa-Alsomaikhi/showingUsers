@@ -1,9 +1,12 @@
 package com.abc.howingusers.UI.main
 
 import android.content.Context
+import android.icu.number.NumberFormatter.with
+import android.icu.number.NumberRangeFormatter.with
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.makeText
@@ -11,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abc.howingusers.Data.users
 import com.abc.howingusers.R
 import com.abc.howingusers.domain.MainViewModel
+import com.squareup.picasso.Picasso
+
 
 class RecyclerViewAdapter( val arrayList: ArrayList<users>): RecyclerView.Adapter<RecyclerViewAdapter.NotesViewHolder>()  {
     override fun onCreateViewHolder(
@@ -44,13 +49,25 @@ class RecyclerViewAdapter( val arrayList: ArrayList<users>): RecyclerView.Adapte
             val name = binding.findViewById(R.id.name) as TextView
             val userID = binding.findViewById(R.id.userID) as TextView
             val email = binding.findViewById(R.id.email) as TextView
+            val avatar = binding.findViewById(R.id.imageView) as ImageView
 
-            name.text = user.firstName + user.lastName
-            userID.text = user.userID.toString()
-            email.text = user.email
+
+            name.text = "name: " + user.firstName + " " + user.lastName
+            userID.text = "Id:" + user.userID.toString()
+            email.text = "email: " + user.email
+
+            Picasso.get()
+            .load(user.avatar)
+                   .resize(91,83)
+                   .centerCrop()
+                    .into(avatar)
+
+
 
         }
-
     }
 
 }
+
+
+
