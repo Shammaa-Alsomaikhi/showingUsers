@@ -27,9 +27,9 @@ class RecyclerViewAdapter(private val Users: ArrayList<users>) : RecyclerView.Ad
                 val email = findViewById(R.id.email) as TextView
                 val avatar = findViewById(R.id.imageView) as ImageView
 
-                name.text = "name: " + user.first_name + " " + user.last_name
-                userID.text = "Id:" + user.userID.toString()
-                email.text = "email: " + user.email
+                name.text = "Name: " + user.first_name + " " + user.last_name
+                userID.text = "Id: " + user.userID.toString()
+                email.text = "Email: " + user.email
                 Picasso.get()
                         .load(user.avatar)
                         .into(avatar)

@@ -28,7 +28,7 @@
             android:layout_toRightOf="@+id/imageView"
             android:padding="3dp"
             android:text="id"
-            android:textColor="#000" />
+            android:textColor="#727272" />
 
         <TextView
             android:id="@+id/name"
@@ -40,25 +40,25 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="68dp"
             android:layout_marginLeft="68dp"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="-1dp"
+            android:layout_marginBottom="4dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:text="name" />
 
         <TextView
             android:id="@+id/email"
-            android:layout_width="145dp"
+            android:layout_width="207dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/userID"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginStart="68dp"
             android:layout_marginLeft="68dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
             android:layout_marginBottom="3dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
