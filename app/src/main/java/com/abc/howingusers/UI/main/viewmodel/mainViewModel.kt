@@ -3,7 +3,7 @@ package com.abc.howingusers.UI.main.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.abc.howingusers.Data.repository.mainRepository
-import com.abc.howingusers.domain.Resource
+import com.abc.howingusers.Domain.Resource
 
 import kotlinx.coroutines.Dispatchers
 

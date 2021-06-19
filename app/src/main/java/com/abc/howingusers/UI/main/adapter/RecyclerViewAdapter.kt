@@ -1,17 +1,16 @@
 package com.abc.howingusers.UI.main.adapter
 
-import android.text.method.TextKeyListener.clear
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.abc.howingusers.Data.model.users
 import com.abc.howingusers.R
 import com.squareup.picasso.Picasso
-import java.util.Collections.addAll
+
 
 
 class RecyclerViewAdapter(private val Users: ArrayList<users>) : RecyclerView.Adapter<RecyclerViewAdapter.DataViewHolder>() {
@@ -22,6 +21,7 @@ class RecyclerViewAdapter(private val Users: ArrayList<users>) : RecyclerView.Ad
             itemView.apply {
 
                 //(val id: Int, val email: String, val firstName: String, val lastName: String, val avatar: String)
+
                val name = findViewById(R.id.name) as TextView
                 val userID = findViewById(R.id.userID) as TextView
                 val email = findViewById(R.id.email) as TextView
@@ -34,7 +34,7 @@ class RecyclerViewAdapter(private val Users: ArrayList<users>) : RecyclerView.Ad
                         .load(user.avatar)
                         .into(avatar)
 
-              //  print("it work! ")
+
 
 
 

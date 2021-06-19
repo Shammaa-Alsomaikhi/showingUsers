@@ -1,4 +1,4 @@
-package com.abc.howingusers.domain
+package com.abc.howingusers.Domain
 
 enum class status {
 

@@ -1,8 +1,8 @@
-package com.abc.howingusers.domain
+package com.abc.howingusers.Domain
 
-import com.abc.howingusers.domain.status.ERROR
-import com.abc.howingusers.domain.status.LOADING
-import com.abc.howingusers.domain.status.SUCCESS
+import com.abc.howingusers.Domain.status.ERROR
+import com.abc.howingusers.Domain.status.LOADING
+import com.abc.howingusers.Domain.status.SUCCESS
 
 
 data class Resource <out T>(val status: status, val data: T?, val message: String?) {

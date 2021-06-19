@@ -16,15 +16,14 @@ import com.abc.howingusers.R
 import com.abc.howingusers.UI.base.ViewModelFactory
 import com.abc.howingusers.UI.main.adapter.RecyclerViewAdapter
 import com.abc.howingusers.UI.main.viewmodel.mainViewModel
-import com.abc.howingusers.domain.status.ERROR
-import com.abc.howingusers.domain.status.LOADING
-import com.abc.howingusers.domain.status.SUCCESS
-//import kotlinx.android.synthetic.main.activity_user.recyclerView
-//import kotlinx.android.synthetic.main.row_badges_item.view.*
-//import kotlinx.android.synthetic.item_forecast.view.*
+import com.abc.howingusers.Domain.status.ERROR
+import com.abc.howingusers.Domain.status.LOADING
+import com.abc.howingusers.Domain.status.SUCCESS
+
 
 class MainActivity : AppCompatActivity() {
 
+    //The lateinit keyword stands for late initialization. * variable can't be of null type
     private lateinit var viewModel: mainViewModel
     private lateinit var adapter: RecyclerViewAdapter
 
@@ -39,6 +38,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
+
+       // ViewModelProviders.of(<Your UI controller>).get(<Your ViewModel>.class)
+        // use the ViewModelFactory class to instantiate and return the ViewModel object
+        // that survives configuration changes.
+        // A GOOD explanation here: https://medium.com/koderlabs/viewmodel-with-viewmodelprovider-factory-the-creator-of-viewmodel-8fabfec1aa4f
+
         viewModel = ViewModelProviders.of(
                 this,
                 ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
@@ -69,16 +74,13 @@ class MainActivity : AppCompatActivity() {
                 when (resource.status) {
                     SUCCESS -> {
                         recyclerView.visibility = View.VISIBLE
-                     //   progressBar.visibility = View.GONE
                         resource.data?.let { users -> retrieveList(users) }
                     }
                     ERROR -> {
                         recyclerView.visibility = View.VISIBLE
-                     //   progressBar.visibility = View.GONE
                         Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
                     }
                     LOADING -> {
-                    //    progressBar.visibility = View.VISIBLE
                         recyclerView.visibility = View.GONE
                     }
                 }
