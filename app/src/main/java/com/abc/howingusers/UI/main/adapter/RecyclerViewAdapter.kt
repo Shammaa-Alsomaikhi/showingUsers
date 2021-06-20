@@ -45,7 +45,7 @@ class RecyclerViewAdapter(private val Users: ArrayList<users>) : RecyclerView.Ad
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder =
                 DataViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false))
 
-        override fun getItemCount(): Int = Users.size
+       override fun getItemCount(): Int = Users.size
 
         override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
             holder.bind(Users[position])

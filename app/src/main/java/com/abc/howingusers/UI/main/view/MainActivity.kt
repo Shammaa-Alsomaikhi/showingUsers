@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: mainViewModel
     private lateinit var adapter: RecyclerViewAdapter
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -53,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
         //getting recyclerview from xml
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
-        //adding a layoutmanager
+        //adding a layoutmanager, LayoutManager is responsible for measuring and positioning item views within a RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
        // recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = RecyclerViewAdapter(arrayListOf())
@@ -65,6 +66,10 @@ class MainActivity : AppCompatActivity() {
         )
         recyclerView.adapter = adapter
     }
+
+    //LiveData, which is one of the Android Architecture Components,
+    // lets you build data objects that notify views when the underlying database changes.
+    //To use the LiveData class, you set up "observers" (for example, activities or fragments) that observe changes in the app's data
 
     private fun setupObservers() {
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
